@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "SingletonViewController.h"
 
-@interface RootViewController : UIViewController
+@interface RootViewController : UIViewController {
+	dispatch_queue_t global_queue;
+	dispatch_group_t group;
+}
+
+- (void)runByFoundationMethod;
+- (void)runQueueByGCDMethod;
+- (void)runGroupByGCDMethod;
 
 @end

@@ -38,24 +38,16 @@
 {
 	[super viewDidLoad];
 	
+	// run on main queue
+	[self runMainQueueByFoundationMethod];
+	[self runMainQueueByGCDMethod];
+	
 	/*
-	dispatch_queue_t queue = dispatch_queue_create(@"com.forceoperationx.gcdsample", NULL);
-	dispatch_async(queue, ^{
+	dispatch_queue_t gcd_queue = dispatch_queue_create("com.forceoperation.gcdsample", NULL);
+	dispatch_async(gcd_queue, ^{
 		[self doWork];
-	});
-	dispatch_async(queue, ^{
-		[self doWork2];
 	});
 	 */
-	
-	NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-	[queue addOperationWithBlock:^{
-		[self doWork];
-	}];
-	[queue addOperationWithBlock:^{
-		[self doWork2];
-	}];
-	
 }
 
 - (void)viewDidUnload
@@ -71,6 +63,30 @@
 	return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+
+
+#pragma mark --Run in main thread--
+- (void)runMainQueueByFoundationMethod {
+	NSOperationQueue *queue = [NSOperationQueue mainQueue];
+	[queue addOperationWithBlock:^{
+		[self doWork];
+	}];
+	[queue addOperationWithBlock:^{
+		[self doWork2];
+	}];
+}
+
+- (void)runMainQueueByGCDMethod {
+	dispatch_queue_t gcd_main_queue = dispatch_get_main_queue();
+	dispatch_async(gcd_main_queue, ^{
+		[self doWork];
+	});
+	dispatch_async(gcd_main_queue, ^{
+		[self doWork2];
+	});
+}
+
+#pragma mark --queue method--
 - (void)doWork {
 	for (NSInteger i = 0; i < 15; i++) {
 		NSLog(@"Count-A: %d", i);

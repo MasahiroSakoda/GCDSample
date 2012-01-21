@@ -10,4 +10,7 @@
 
 @interface SingletonViewController : UIViewController
 
+- (void)runMainQueueByFoundationMethod;
+- (void)runMainQueueByGCDMethod;
+
 @end

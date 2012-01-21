@@ -37,28 +37,13 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+	[self runByFoundationMethod];
+	
 	// create thread queue
-	dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+	global_queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+	[self runQueueByGCDMethod];
+	[self runGroupByGCDMethod];
 	
-	// create thread queue group
-	dispatch_group_t group = dispatch_group_create();
-	
-	// run
-	/*
-	dispatch_async(queue, ^{
-		[self doWork];
-	});
-	dispatch_async(queue, ^{
-		[self doWork2];
-	});
-	 */
-	
-	dispatch_group_async(group, queue, ^{
-		[self doWork];
-	});
-	dispatch_group_async(group, queue, ^{
-		[self doWork2];
-	});
 	NSLog(@"queue end!!");
 }
 
@@ -75,6 +60,45 @@
 	return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark --Run by queue--
+- (void)runByFoundationMethod {
+	NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+	[queue addOperationWithBlock:^{
+		[self doWork];
+	}];
+	[queue addOperationWithBlock:^{
+		[self doWork2];
+	}];
+	
+}
+
+- (void)runQueueByGCDMethod {
+	
+	// run by single queue
+	dispatch_async(global_queue, ^{
+		[self doWork];
+	});
+	dispatch_async(global_queue, ^{
+		[self doWork2];
+	});
+	
+}
+
+#pragma mark --Run by group--
+- (void)runGroupByGCDMethod {
+	// create thread queue group
+	group = dispatch_group_create();
+	
+	// run by group
+	dispatch_group_async(group, global_queue, ^{
+		[self doWork];
+	});
+	dispatch_group_async(group, global_queue, ^{
+		[self doWork2];
+	});
+}
+
+#pragma mark --queue method--
 - (void)doWork {
 	for (NSInteger i = 0; i < 15; i++) {
 		NSLog(@"Count-A: %d", i);
