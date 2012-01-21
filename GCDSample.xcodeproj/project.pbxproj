@@ -18,6 +18,10 @@
 		1034253814CAE799002F7F85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1034251F14CAE798002F7F85 /* Foundation.framework */; };
 		1034254014CAE799002F7F85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1034253E14CAE799002F7F85 /* InfoPlist.strings */; };
 		1034254314CAE799002F7F85 /* GCDSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034254214CAE799002F7F85 /* GCDSampleTests.m */; };
+		1034255414CAE7EB002F7F85 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034255214CAE7EB002F7F85 /* RootViewController.m */; };
+		1034255514CAE7EB002F7F85 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1034255314CAE7EB002F7F85 /* RootViewController.xib */; };
+		1034255914CAED7C002F7F85 /* SingletonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1034255714CAED7C002F7F85 /* SingletonViewController.m */; };
+		1034255A14CAED7C002F7F85 /* SingletonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1034255814CAED7C002F7F85 /* SingletonViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,18 +39,24 @@
 		1034251D14CAE798002F7F85 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1034251F14CAE798002F7F85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1034252114CAE798002F7F85 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1034252514CAE799002F7F85 /* GCDSample-Info.plist */ = {isa = PBXFileReference; path = "GCDSample-Info.plist"; sourceTree = "<group>"; };
+		1034252514CAE799002F7F85 /* GCDSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GCDSample-Info.plist"; sourceTree = "<group>"; };
 		1034252714CAE799002F7F85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1034252914CAE799002F7F85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1034252B14CAE799002F7F85 /* GCDSample-Prefix.pch */ = {isa = PBXFileReference; path = "GCDSample-Prefix.pch"; sourceTree = "<group>"; };
-		1034252C14CAE799002F7F85 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		1034252B14CAE799002F7F85 /* GCDSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCDSample-Prefix.pch"; sourceTree = "<group>"; };
+		1034252C14CAE799002F7F85 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1034252D14CAE799002F7F85 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1034253414CAE799002F7F85 /* GCDSampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCDSampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1034253514CAE799002F7F85 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		1034253D14CAE799002F7F85 /* GCDSampleTests-Info.plist */ = {isa = PBXFileReference; path = "GCDSampleTests-Info.plist"; sourceTree = "<group>"; };
+		1034253D14CAE799002F7F85 /* GCDSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GCDSampleTests-Info.plist"; sourceTree = "<group>"; };
 		1034253F14CAE799002F7F85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1034254114CAE799002F7F85 /* GCDSampleTests.h */ = {isa = PBXFileReference; path = GCDSampleTests.h; sourceTree = "<group>"; };
+		1034254114CAE799002F7F85 /* GCDSampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDSampleTests.h; sourceTree = "<group>"; };
 		1034254214CAE799002F7F85 /* GCDSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDSampleTests.m; sourceTree = "<group>"; };
+		1034255114CAE7EB002F7F85 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		1034255214CAE7EB002F7F85 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		1034255314CAE7EB002F7F85 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		1034255614CAED7C002F7F85 /* SingletonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonViewController.h; sourceTree = "<group>"; };
+		1034255714CAED7C002F7F85 /* SingletonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonViewController.m; sourceTree = "<group>"; };
+		1034255814CAED7C002F7F85 /* SingletonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingletonViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,11 @@
 		1034252314CAE799002F7F85 /* GCDSample */ = {
 			isa = PBXGroup;
 			children = (
+				1034254F14CAE7CA002F7F85 /* Utils */,
+				1034254E14CAE7CA002F7F85 /* Model */,
+				1034255014CAE7CA002F7F85 /* View */,
+				1034254C14CAE7CA002F7F85 /* Controller */,
+				1034254D14CAE7CA002F7F85 /* Manager */,
 				1034252C14CAE799002F7F85 /* AppDelegate.h */,
 				1034252D14CAE799002F7F85 /* AppDelegate.m */,
 				1034252414CAE799002F7F85 /* Supporting Files */,
@@ -141,6 +156,47 @@
 				1034253E14CAE799002F7F85 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1034254C14CAE7CA002F7F85 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1034255114CAE7EB002F7F85 /* RootViewController.h */,
+				1034255214CAE7EB002F7F85 /* RootViewController.m */,
+				1034255314CAE7EB002F7F85 /* RootViewController.xib */,
+				1034255614CAED7C002F7F85 /* SingletonViewController.h */,
+				1034255714CAED7C002F7F85 /* SingletonViewController.m */,
+				1034255814CAED7C002F7F85 /* SingletonViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1034254D14CAE7CA002F7F85 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1034254E14CAE7CA002F7F85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1034254F14CAE7CA002F7F85 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1034255014CAE7CA002F7F85 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1034252814CAE799002F7F85 /* InfoPlist.strings in Resources */,
+				1034255514CAE7EB002F7F85 /* RootViewController.xib in Resources */,
+				1034255A14CAED7C002F7F85 /* SingletonViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +308,8 @@
 			files = (
 				1034252A14CAE799002F7F85 /* main.m in Sources */,
 				1034252E14CAE799002F7F85 /* AppDelegate.m in Sources */,
+				1034255414CAE7EB002F7F85 /* RootViewController.m in Sources */,
+				1034255914CAED7C002F7F85 /* SingletonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
